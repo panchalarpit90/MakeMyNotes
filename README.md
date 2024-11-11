@@ -34,8 +34,8 @@ MakeMyNotes is a simple yet powerful note-taking Android application built with 
 
 ## Video Demo
 
-[[Video Demo](https://drive.google.com/file/d/1XpEp1AHnYq0ggFT7hUuS4szZIqjhrNWv/view?usp=drivesdk)](#)
+[[Video Demo](https://drive.google.com/file/d/1XpEp1AHnYq0ggFT7hUuS4szZIqjhrNWv/view?usp=drivesdk)]
 
 ## Download APK
 
-[[Download APK from Google Drive](https://drive.google.com/file/d/1qg4MxA-ZjpEOATCUcuE8rc4kN4GTPrwx/view?usp=sharing)](#)
+[[Download APK from Google Drive](https://drive.google.com/file/d/1qg4MxA-ZjpEOATCUcuE8rc4kN4GTPrwx/view?usp=sharing)]
