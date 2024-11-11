@@ -26,7 +26,7 @@
                     android:layout_height="wrap_content"
                     android:padding="@dimen/_15sdp">
 
-                    <!-- Label Text -->
+                
                     <TextView
                         android:id="@+id/notes_label"
                         android:layout_width="0dp"
