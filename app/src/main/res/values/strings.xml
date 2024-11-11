@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MakeMyNotes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="makemynotes">MakeMyNotes</string>
+    <string name="desc_all">Organize every thought and make <font color="#E5E4E8">your notes work for you -</font> capture every detail, all in one place.</string>
+    <string name="login">Login with Google</string>
+    <string name="mynotes">My\nNotes</string>
+    <string name="client_id">1061799043759-10i2i1cduiju1dtatjutjjt1v5qpi8jd.apps.googleusercontent.com</string>
+    <string name="note">Note</string>
+    <string name="title">Title</string>
+    <string name="search">Search...</string>
+    <string name="delete_all">Delete All</string>
+    <string name="logout">Logout</string>
+
+</resources>

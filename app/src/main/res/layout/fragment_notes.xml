@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.notes.NotesFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/mainBg"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mainBg"
+                app:contentScrim="@color/mainBg"
+                app:layout_scrollFlags="scroll|snap">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_15sdp">
+
+                    <!-- Label Text -->
+                    <TextView
+                        android:id="@+id/notes_label"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/bevietnam_regular"
+                        android:text="@string/mynotes"
+                        android:textColor="@color/lightText"
+                        android:textSize="@dimen/_30ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/delete_all_btn"
+                        style="?attr/materialIconButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_delete"
+                        android:drawableTint="@color/lightText"
+                        android:fontFamily="@font/bevietnam_regular"
+                        android:text="@string/delete_all"
+                        android:textColor="@color/lightText"
+                        android:textSize="@dimen/_6sdp"
+                        app:iconTint="@color/lightText"
+                        app:layout_constraintBottom_toBottomOf="@+id/logout_btn"
+                        app:layout_constraintEnd_toStartOf="@+id/logout_btn"
+                        app:layout_constraintTop_toTopOf="@+id/logout_btn" />
+
+
+                    <Button
+                        android:id="@+id/logout_btn"
+                        style="?attr/materialIconButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ic_logout"
+                        android:fontFamily="@font/bevietnam_regular"
+                        android:text="@string/logout"
+                        android:textColor="@color/lightText"
+                        android:textSize="@dimen/_6sdp"
+                        app:iconTint="@color/lightText"
+                        app:layout_constraintBottom_toBottomOf="@+id/notes_label"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/search_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mainBg"
+                app:contentScrim="@color/mainBg">
+
+                <EditText
+                    android:id="@+id/search_textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/search_edittext_background"
+                    android:drawableStart="@drawable/ic_search"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:drawableTint="@color/lightText"
+                    android:fontFamily="@font/bevietnam_regular"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/lightText"
+                    android:textSize="@dimen/_10ssp" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/noteRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:spanCount="2"
+            tools:itemCount="16"
+            tools:listitem="@layout/note_layout" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add_note"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/newNoteFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:clickable="true"
+            android:src="@drawable/ic_add"
+            app:backgroundTint="@color/buttonColor"
+            app:layout_anchor="@id/noteRecycler"
+            app:layout_anchorGravity="bottom|end"
+            app:tint="@color/white"
+            tools:ignore="KeyboardInaccessibleWidget" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
